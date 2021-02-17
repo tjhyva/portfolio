@@ -1,0 +1,452 @@
+    /*google fontit*/
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Special+Elite|PT+Sans');
+
+html {
+scroll-behavior: smooth;
+}    
+body *{
+    margin: 0;  
+}
+body {
+    font-size: 100%;
+    font-family: 'PT Sans', "Lucida Sans Unicode", "Verdana", sans-serif;
+    background-color: gainsboro;
+    margin: 0;
+}
+header {
+    margin-bottom: 2em;
+}
+header.portfolio{
+    margin: 0;
+}    
+main {
+    max-width: 100%;
+    margin: auto;    
+}
+header#mainHeader {
+    float: left;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 7%;
+    width: 40%;
+}
+footer {
+    margin-top: 2em;
+    padding-top: 0em;
+    padding-bottom: 0.25em;
+    background-color: #B0B0B0;
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+p.footer {
+    text-align: center;
+}    
+p {
+    text-align: justify;
+}
+h1, h2 {
+    font-size: 4.5em;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 0.35em;
+    padding-top: 1em;
+}
+h2.sivut {
+    text-shadow: 4px 4px #2D2322;
+    color: white;
+}    
+h1.main-title {
+    line-height: 1em;
+    padding-bottom: 0.2em;
+    color: white;
+}
+h2.nav {
+    font-size:150%;
+    padding: 0;
+    letter-spacing: 0.15em;
+    float: left;
+}
+h3 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 5%;
+}
+h4{
+    font-size: 1.2em;    
+}
+#harrastukset, #portfolio, #yhteystiedot {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+section.center {
+    text-align: center;    
+}    
+.hero-image {
+    background-image: url("../images/tomi.jpg");
+    background-color: #cccccc;
+    height: 100vh;
+    width: 100%;    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+}
+p.text-background {
+    background: white;
+    display: inline;
+    padding: 0.1em 0.5em;
+    line-height: 1.9em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}    
+ 
+    /*linkit*/
+a:link, a.one:visited, a.one:hover a.one:active {
+    color: #994d00;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: lighter;
+}   
+a:visited {
+    color: lightsteelblue;
+}   
+a:hover {
+    color: red;
+}   
+a:active {
+    color: green;
+}   /*linkit*/
+   
+    /*navi*/
+ul.nav {
+    color: #F0EBEB;
+    text-align: center;
+    font-size: 150%;
+    z-index: 2;
+    height: auto;
+    list-style-type: none;
+    background-color: #2D2322;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-top:94.6vh;
+    overflow: hidden;
+    padding-left: 1%;
+}
+li.nav {
+    float: right;
+}
+li a.nav {
+    height: auto;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 11px 0.4em;
+}
+li a.nav:hover {
+    background-color: gainsboro;
+}
+    /*navi*/
+    
+   /*harrastukset kääntökortit*/
+.flip-card {
+    width: 22em;
+    height: 60%;
+    perspective: 5000px;
+    display: inline-block;
+    padding: 0 2.1% 3em;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    border-radius: 1em;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+ }
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: white;
+    color: black;
+    border-radius: 1em;
+}
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 1em;
+}
+.flip-card-text-box {
+    height: 90%;
+    background-color: rgba(45,35,34,0.6);
+    margin: 3%;
+    border-radius: 1em;
+    padding: 4%;
+}    
+#sk8, #cs, #ohjelmointi {
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+    background-image: url("../images/skatebg.jpg");
+    background-size: cover;
+}
+#cs {
+    background-image: url("../images/csbg.jpg");
+} 
+#ohjelmointi {
+    background-image: url("../images/ohjelmointibg.jpg");
+}    
+.text-front {
+    font-family: 'Special Elite', monospace;
+    font-size: 3em;
+    margin-top: 3em;
+}
+.text-back {
+    font-size: 1.1em;
+}     /*harrastukset kääntökortit*/ 
+    
+    /*portfolio kortti*/
+.card-port {
+    width: 80%;
+    height: auto;
+    border-radius: 1em;
+    background-color: white;
+    margin: 0 10%;
+}
+.container-port {
+    font-size: 1.1em;
+    text-align: left;
+    font-weight: bold;
+}   
+.banner, .banner-top {
+    text-align: center;
+    height: auto;
+    background-color: #2D2322;
+    color: white;
+    margin: 0.3em 0;
+}
+.banner-top {
+    border-radius: 0.5em 0.5em 0 0;
+    margin-bottom: 0.25em;
+    }    
+ul.port, .text-port {
+   list-style-type: circle;
+    margin: 0 1%;
+}
+.text-port {
+    margin: 1%;
+}
+img.portfolio {
+    margin: 8px 10px;
+    width: 7em;
+    height: auto;
+    border-radius: 5%;
+}
+   /*portfolio kortti*/
+    
+    /*yhteystiedot*/
+div#puhelin, div#email {
+    display: inline-block;
+    width: 22em;
+    height: 22em;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 5% 4% 0;
+}
+.emailbg, .puhelinbg {
+    background-position: center;
+    background-image: url("../images/email.png");
+    background-size: 4.5em;
+}
+.puhelinbg {
+    background-image: url("../images/puhelin.png");   
+}
+address.yhteys-text {
+    margin-top: 145px;
+    font-size: 200%;
+    color: black;
+    padding: 11px;
+    background-color: #FF8E2C;
+}    
+    /*yhteystiedot*/
+    
+@media only screen and (max-width: 1360px) {
+    .flip-card {
+        width: 25%;
+    }
+    .text-front {     
+        font-size: 2em;
+        margin-top: 5em;
+    }
+    .text-back {
+        font-size: 1em;    
+    }        
+}
+
+@media only screen and (max-width: 1100px) {
+    .text-back {
+        font-size: 0.85em;    
+}  
+}
+@media only screen and (max-width: 960px) {
+    h1 {
+        font-size: 3.8em;    
+    }
+    h2.nav {
+        display: none;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 1.5em;
+        margin-bottom: 0.1em;
+    }
+    p#footer {
+        font-size: 0.75em;
+    }
+    div#puhelin, div#email {
+        height: 13em;
+        width: 13em;
+    }
+    address.yhteys-text {
+        margin-top: 80px;
+        font-size: 150%;
+    }
+    .flip-card {
+        width: 80%;
+        height: 12em;
+        padding: 0 2.1% 1em;
+    }
+    .text-front {     
+        margin-top: 0.9em;
+        margin-bottom: 0;
+    }
+    .flip-card-text-box {
+        margin: 0.3em;
+        padding: 0.2em;
+    }
+}
+    @media only screen and (max-width: 600px) {
+    h1, h2 {
+        font-size: 1.5em;    
+    }
+    h3, h4 {
+        font-size: 1em;
+    }
+   
+    ul.nav {
+        font-size: 0.8em;
+        margin-top:96.3vh;
+    }
+    p#footer {
+        font-size: 0.4em;
+    }
+    .flip-card {
+        height: 12em;
+        padding: 0 2.1% 1em;
+    }
+    .text-front {     
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+    .text-back {
+        font-size: 0.7em;    
+    }
+    .container-port {
+        font-size: 0.85em;
+        text-align: left;
+        font-weight: lighter;
+    }
+    p.text-background {
+        float: left;
+        font-size: 0.8em;
+        padding: 0.5em 0.5em;
+        line-height: 1em;
+        margin-top: 5em;
+        border-radius: 0.5em;
+    }
+    li a.nav {
+        padding: 5px
+    }
+    footer {
+        padding: 0;
+        position: static;
+    }
+    #harrastukset {
+        height: 120vh;
+    }        
+}
+    @media only screen and (max-height: 300px){
+    h1 {
+        font-size: 1.5em;
+        padding: 0;    
+    }
+    h3 {
+        font-size: 0.7em;
+    }    
+    p.text-background {
+        font-size: 0.73em;
+        padding: 0.5em 0.5em;
+        margin-top: 0.5em;
+        width: 100%;
+    }
+    header#mainHeader {
+        margin-top: 0.5em;
+    }
+    li a.nav {
+        padding: 5px
+    }
+
+    footer {
+        padding: 0;
+        position: static;
+    }
+    ul.nav {
+        font-size: 0.8em;
+        margin-top:93vh;
+    }
+    #harrastukset {
+        height: 180vh;
+    }
+    #portfolio {
+        height: 230vh;    
+    }     
+    header {
+        margin-bottom: 0.5em;
+    }
+    div#puhelin, div#email {
+        margin-top: 0;
+        height: 8em;
+        width: 8em;
+    }
+    address.yhteys-text {
+        margin-top: 45px;
+        font-size: 0.75em;
+    }
+    .flip-card {
+        height: 9em
+    }
+    .text-front {
+        font-size: 1em;
+    }
+    .text-back {
+        font-size: 0.8em;
+    }    
+}  

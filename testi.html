@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="icon" href="images/icons8-skateboarding-16.png" type="image/gif" sizes="16x16"><!--title ikoni-->
+    
+    <title>Tomi Hyvärinen</title>
+
+<style>
+    
+    /*google fontit*/
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Special+Elite|PT+Sans');
+
+html {
+scroll-behavior: smooth;
+}    
+body *{
+    margin: 0;  
+}
+body {
+    font-size: 100%;
+    font-family: 'PT Sans', "Lucida Sans Unicode", "Verdana", sans-serif;
+    background-color: gainsboro;
+    margin: 0;
+}
+main {
+    max-width: 100%;
+    margin: auto;    
+}
+header#mainHeader {
+    float: left;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 7%;
+    width: 40%;
+}
+footer {
+    margin-top: 2em;
+    padding-top:0.25em;
+    padding-bottom:0.25em;
+    background-color: #B0B0B0;
+    color: white;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+p#footer {
+    text-align: center;
+}    
+p {
+    text-align: justify;
+}
+h1, h2 {
+    font-size: 4.5em;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 0.35em;
+    padding-top: 1em;
+}
+h2.sivut {
+    text-shadow: 4px 4px #2D2322;
+    color: white;
+}    
+h1.main-title {
+    line-height: 1em;
+    padding-bottom: 0.2em;
+    color: white;
+}    
+h2.nav {
+    font-size:150%;
+    padding: 0;
+}
+h3 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 5%;
+}
+h4{
+    font-size: 1.2em;    
+}
+#harrastukset, #portfolio, #yhteystiedot {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+.hero-image {
+    background-image: url("images/tomi.png");
+    background-color: #cccccc;
+    height: 100vh;
+    width: 100%;    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+}
+p.text-background {
+    background: white;
+    display: inline;
+    padding: 0.1em 0.5em;
+    line-height: 1.9em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}    
+ 
+    /*linkit*/
+a:link, a.one:visited, a.one:hover a.one:active {
+    color: #994d00;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: lighter;
+}   
+a:visited {
+    color: lightsteelblue;
+}   
+a:hover {
+    color: red;
+}   
+a:active {
+    color: green;
+}   /*linkit*/
+   
+    /*navi*/
+ul.nav {
+    color: #F0EBEB;
+    text-align: center;
+    font-size: 150%;
+    z-index: 2;
+    height: auto;
+    list-style-type: none;
+    background-color: #2D2322;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-top:94.3vh;
+    overflow: hidden;
+}
+li.nav {
+    float: right;
+}
+li a.nav {
+    height: auto;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 11px 16px;
+}
+li a.nav:hover {
+    background-color: gainsboro;
+}
+.navname {
+    float:left;
+    padding: 0 5%;
+}   /*navi*/
+
+    /*harrastukset kääntökortit*/
+.flip-card {
+    width: 22em;
+    height: 60%;
+    perspective: 5000px;
+    display: inline-block;
+    padding: 3em 2.1%;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    border-radius: 5%;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+ }
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: white;
+    color: black;
+    border-radius: 5%;
+}
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 5%;
+}
+.flip-card-text-box {
+    height: 90%;
+    background-color: rgba(45,35,34,0.6);
+    margin: 3%;
+    border-radius: 5%;
+    padding: 4%;
+}    
+#sk8, #cs, #ohjelmointi {
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+    background-image: url("images/skatebg.jpg");
+    background-size: cover;
+}
+#cs {
+    background-image: url("images/csbg.jpg");
+} 
+#ohjelmointi {
+    background-image: url("images/ohjelmointibg.jpg");
+}    
+.text-front {
+    font-family: 'Special Elite', monospace;
+    font-size: 3em;
+    margin-top: 40%;
+}
+.text-back {
+    font-size: 1.1em;
+}     /*harrastukset kääntökortit*/ 
+    
+    /*portfolio kortti*/
+.card-port {
+    width: 80%;
+    height: auto;
+    border-radius: 1em;
+    background-color: white;
+    margin: 2% 10%;
+}
+.container-port {
+    font-size: 1.2em;
+    text-align: left;
+    padding: 0 0 1em;
+}   
+.banner, .banner-top {
+    text-align: center;
+    height: auto;
+    background-color: #2D2322;
+    color: white;
+    margin: 0.25em 0;
+}
+.banner-top {
+    border-radius: 0.5em 0.5em 0 0;
+    margin-bottom: 0.25em;
+    }    
+ul.port, .text-port {
+   list-style-type: circle;
+    margin: 0 1%;
+}
+.text-port {
+    margin: 1%;
+}    
+   /*portfolio kortti*/
+    
+    /*yhteystiedot*/
+div#puhelin, div#email {
+    display: inline-block;
+    width: 22em;
+    height: 22em;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 8% 5% 0;
+}
+.emailbg, .puhelinbg {
+    background-position: center;
+    background-image: url("images/email.png");
+    background-size: 4.5em;
+}
+.puhelinbg {
+    background-image: url("images/puhelin.png");   
+}
+address.yhteys-text {
+    margin-top: 145px;
+    font-size: 200%;
+    color: black;
+    padding: 11px;
+    background-color: #FF8E2C;
+}    
+    /*yhteystiedot*/      
+
+
+</style> 
+    
+</head>
+<body>
+    <!--Start main-->
+    <main>        
+        <nav> <!--Start navi-->
+            <ul class="nav">
+                <li class="nav"><a class="nav" href="#yhteystiedot">Yhteystiedot</a></li>
+                <li class="nav"><a class="nav" href="#portfolio">Portfolio</a></li>
+                <li class="nav"><a class="nav" href="#harrastukset">Harrastukset</a></li>
+                <li class="nav"><a class="active nav" href="#etusivu">Etusivu</a></li>
+                <li class="navname"><h2 class="nav">Tomi Hyvärinen</h2></li>
+            </ul>
+            
+        <!--Start footer-->    
+        <footer> 
+            <p id="footer">made by tomi hyvärinen 2019 | powered by coffee and red bull | icons dragged from <a href="https://icons8.com/" target="_blank">8icons</a></p>
+        </footer> 
+        <!--End footer-->
+            
+        <!--etusivu-->   
+        <div class="hero-image" id="etusivu"> 
+            <header id="mainHeader">
+                <h1 class="main-title">Tomi Hyvärinen</h1>
+                <p class="text-background">Tervetuloa sivuilleni, olen Tomi Hyvärinen 34vuotta, perheeseeni kuuluvat vaimo, kaksostytöt ja toki myös kolme kissaa mahtuu mukaan. Olen töissä <a href="http://www.alsemet.fi/" target="_blank">Alsemetilla</a>, jossa työkuvani on suunnittelu ja tuotannonohjaus.<strong> Tavoitteenani on päästä opiskelemaan Tieto- ja viestintätekniikkaa <a href="https://www.jamk.fi/" target="_blank">Jyväskylän ammattikorkeakouluun</a>.</strong></p>
+            </header>
+        </div> 
+        <!--end etusivu--> 
+            
+        <!--start harrastukset-->
+        <section id="harrastukset">
+            <header>
+                <h2 class="sivut">Harrastukset</h2>
+            </header>    
+            <!--start skeittaus-->
+            <section class="flip-card" >
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3 class="text-front">Skeittaus</h3>
+                    <img src="images/skateicon.png" alt="skate icon">
+                </div>
+                <div id="sk8" class="flip-card-back">
+                  <div class="flip-card-text-box">
+                    <h3>Skeittaus</h3>    
+                    <p class="text-back"><strong>Harrastuksistani pisimpään olen harrastanut skeittausta.</strong> Skeittauksen aloitin 12 vuoden ikäisenä ja harrastus jatkui aina 18 vuotiaaksi, kunnes tuli paljon "muuta puuhaa". Uudelleen rakas harrastus palasi kuvioihin 25 vuoden iässä, jonka jälkeen skeittaus on aina jatkunut tähän päivään asti ja jatkuu niin kauan kuin paikat kestää... Ja toivoa saattaa että tyttäreni eksyvät myös saman harrastuksen pariin :)</p>
+                  </div>    
+                </div>
+              </div>
+            </section>
+            <!--end skeittaus-->
+            <!--start cs-->
+            <section class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3 class="text-front">CS</h3>
+                    <img src="images/csicon.png" alt="cs icon">
+                </div>
+                <div id="cs" class="flip-card-back">
+                    <div class="flip-card-text-box">
+                  <h3>Counter Strike</h3> 
+                  <p class="text-back">CS tuli kuvioihin 3 vuotta sitten. Olin aina sanonut että fps-pelejä en pelaa, mutta kuinkas kävikään... ja CS:n pelaaminen senkun jatkuu. Toki olen aina pelannut tietokoneella erilaisia MMO-pelejä: ensimmäinen, ja paljon muistoja herättävä peli, oli Lineage2, jonka aloitin joskus 18 vuotiaana ja sitä tulikin pelattua tuhansia tunteja noin 8 vuoden aikana. Tämän jälkeen päädyin kokeilemaan Aionia, siinäkin meni yksi jos toinenkin tunti. <strong>Mutta kaiken kaikkiaan olen erittäin tyytyväinen näihinkin vuosiin pelien maailmassa</strong></p>
+                    </div>
+                </div>
+              </div>
+            </section>
+            <!--end cs-->
+            <!--start ohjelmointi-->
+            <section class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                   <h3 class="text-front">Ohjelmointi</h3>
+                    <img src="images/suunnitteluicon.png" alt="suunnittelu icon">
+                </div>
+                <div id="ohjelmointi" class="flip-card-back">
+                    <div class="flip-card-text-box">
+                  <h3>Ohjelmointi</h3> 
+                  <p class="text-back">Ohjelmoinnin taas löysin noin vuosi sitten, olin toki aina kiinnostunut miten ohjelmat toimii ja viimeinkin päätin ruveta itse tutustumaan tarkemmin aiheeseen. Ihan perusasioissa vielä mennään, tutkimalla eri kieliä. Eniten olen tutustunut C++:aan joka on mukavaa ja haastavaa ajan vietettä.</p>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <!--end ohjelmointi-->
+        </section>
+        <!--end harrastukset-->
+        
+        <!--start portfolio--> 
+        <section id="portfolio">
+            <header>
+                <h2 class="sivut">Portfolio</h2>
+            </header>   
+            <section class="container-port card-port">
+                <section>
+                    <h4 class="banner-top">Yleistä:</h4>
+                    <p class="text-port">Tulevaisuuden tavoite on päästä opiskelemaan Tieto- ja viestintätekniikkaa <a href="https://www.jamk.fi/" target="_blank">Jyväskylän ammattikorkeakouluun</a>. Koulun aikana etsisin myös harjoittelu/työpaikkaa IT-alan töihin, jolloin minulla olisi valmistuttuani loistava tulevaisuus mieluisassa ammatissa. Olen hyvin järjestelmällinen, looginen ja hyvin ihmisten kanssa toimeen tuleva.</p>
+                    <p class="text-port"><strong>Alla listaa koulutuksista, työpaikoista ja muuta elämäni varrelta:</strong></p>
+                </section>
+                
+                <section>
+                    <h4 class="banner">Koulutus:</h4>
+                    <ul class="port">
+                        <li>Kone- ja metallialan perustutkinto vuosina 2001-2004</li>         <li>Sähköalan perustutkinto vuosina 2006-2007</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h4 class="banner">Varusmiespalvelu:</h4>
+                    <ul class="port">
+                        <li>Varusmiespalvelun suoritin Karjalan prikaatissa, Vekarajärvellä 2005.</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h4 class="banner">Työelämä:</h4>
+                    <ul class="port">
+                        <li>Kesätyö <a target="_blank" href="https://huoltosilta.fi/">Huoltosilta </a>1999-2004</li>
+                        <li>LVI-Elektro 2007-2008</li>
+                        <li><a target="_blank" href="http://www.alsemet.fi/">Alsemet</a> 2008-työsuhde jatkuu, suunnittelijana <a target="_blank" href="https://www.autodesk.fi/products/inventor/overview">(Inventor 3D mallinnus)</a> ja työnjohtajana.</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h4 class="banner">Alla työ- ja koulutöitä:</h4>
+                    <p class="text-port">Tämä tila on varattu tulevaisuuden koulu-ja työnäytteille.</p>
+                </section>    
+            </section>            
+            </section>
+            <!--end portfolio-->
+            
+            <!--start yhteystiedot-->
+            <section id="yhteystiedot">
+                <header>    
+                    <h2 class="sivut">Yhteystiedot</h2>
+                </header>    
+                <div id="puhelin" class="puhelinbg"> 
+                    <address class="yhteys-text">+358-123456789</address>
+                </div>
+                <div id="email" class="emailbg"> 
+                    <address class="yhteys-text">m9731@student.jamk.fi</address>
+                </div>
+            </section>
+            <!--end yhteystiedot-->
+        </nav> <!--End navi-->                
+    </main> <!--End main-->
+</body>
+</html>
+
